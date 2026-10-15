@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axborot Resurs Markazi (Kutubxona) — DTPI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { dtpi: { navy: '#0F2C59', blue: '#1E3A8A', gold: '#D4AF37', bgLight: '#F8FAFC' } },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dtpi-bgLight text-slate-800 font-sans antialiased">
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-3">
+        <div class="w-11 h-11 bg-dtpi-navy text-dtpi-gold rounded-full flex items-center justify-center font-extrabold text-lg border-2 border-dtpi-gold">
+          DTPI
+        </div>
+        <div>
+          <h1 class="font-extrabold text-base md:text-lg text-slate-900 leading-tight uppercase">Denov Tadbirkorlik va Pedagogika Instituti</h1>
+          <p class="text-[11px] text-slate-500 font-medium">Axborot-Resurs Markazi</p>
+        </div>
+      </a>
+      <a href="index.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">
+        ← Bosh sahifaga qaytish
+      </a>
+    </div>
+  </header>
+
+  <section class="bg-dtpi-navy text-white py-12 px-4">
+    <div class="max-w-7xl mx-auto text-center space-y-3">
+      <span class="text-dtpi-gold text-xs font-bold bg-white/10 px-3 py-1 rounded-full border border-white/10">📖 Elektron Resurslar & Kitoblar</span>
+      <h2 class="text-3xl font-extrabold">DTPI Axborot-Resurs Markazi</h2>
+      <p class="text-slate-300 text-xs max-w-xl mx-auto">Talabalar va professor-o'qituvchilar uchun darsliklar, o'quv qo'llanmalar hamda Unilibrary bazasi</p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center space-y-3 shadow-sm">
+        <div class="text-4xl">🌐</div>
+        <h3 class="font-bold text-slate-900 text-base">Unilibrary Portali</h3>
+        <p class="text-xs text-slate-500">Oliy ta'lim muassasalarining yagona elektron kutubxona tizimi.</p>
+        <a href="https://unilibrary.uz" target="_blank" class="inline-block bg-dtpi-navy text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-dtpi-blue transition">
+          Unilibrary'ga kirish ↗
+        </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center space-y-3 shadow-sm">
+        <div class="text-4xl">📘</div>
+        <h3 class="font-bold text-slate-900 text-base">O'quv Darsliklari</h3>
+        <p class="text-xs text-slate-500">DTPI yo'nalishlari bo'yicha barcha elektron darslik va qo'llanmalar (PDF).</p>
+        <button class="bg-slate-100 text-slate-700 text-xs font-bold px-4 py-2 rounded-lg cursor-not-allowed">
+          Yuklab olish bo'limi
+        </button>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center space-y-3 shadow-sm">
+        <div class="text-4xl">🔬</div>
+        <h3 class="font-bold text-slate-900 text-base">Scopus & Web of Science</h3>
+        <p class="text-xs text-slate-500">Xalqaro ilmiy ma'lumotlar bazalariga kirish va maqolalar qidiruvi.</p>
+        <a href="https://scopus.com" target="_blank" class="inline-block bg-amber-500 text-slate-900 text-xs font-bold px-4 py-2 rounded-lg hover:bg-amber-600 transition">
+          Scopus'ga o'tish ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 text-center">
+    <p>© 2026 Denov tadbirkorlik va pedagogika instituti. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+</body>
+</html>
