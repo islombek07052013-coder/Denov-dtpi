@@ -36,3 +36,19 @@ function filterNews(type) {
     if (activeBtn) activeBtn.classList.add('bg-white', 'shadow', 'text-dtpi-navy');
   }
 }
+// Live Search (Yangiliklar va xabarlar bo'yicha tezkor qidiruv)
+function searchContent() {
+  const input = document.getElementById('search-input').value.toLowerCase();
+  const cards = document.querySelectorAll('.news-card');
+
+  cards.forEach(card => {
+    const title = card.querySelector('h4').innerText.toLowerCase();
+    const text = card.querySelector('p').innerText.toLowerCase();
+
+    if (title.includes(input) || text.includes(input)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
