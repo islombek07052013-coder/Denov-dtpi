@@ -87,7 +87,7 @@
         </div>
       </a>
 
-   <!-- Navigation Links -->
+      <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-700">
         <a href="rahbariyat.html" class="hover:text-dtpi-navy transition">Institut</a>
         <a href="fakultetlar.html" class="hover:text-dtpi-navy transition">Fakultetlar</a>
@@ -96,12 +96,27 @@
         <a href="kutubxona.html" class="hover:text-dtpi-navy transition">Kutubxona</a>
       </nav>
 
-      <!-- Action Button -->
+      <!-- Action & Mobile Toggle Button -->
       <div class="flex items-center space-x-3">
-        <a href="#contact" class="bg-dtpi-navy hover:bg-dtpi-blue text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-sm">
-          📞 Aloqa va Murojaat
+        <a href="#contact" class="hidden sm:inline-block bg-dtpi-navy hover:bg-dtpi-blue text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-sm">
+          📞 Aloqa
         </a>
+        <!-- Mobil Menyu Tugmasi -->
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-700 hover:text-dtpi-navy focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
+    </div>
+
+    <!-- MOBIL MENYU (Ochilib-yopiladigan) -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 text-sm font-semibold text-slate-700">
+      <a href="rahbariyat.html" class="block py-2 hover:text-dtpi-navy border-b border-slate-100">Institut / Rahbariyat</a>
+      <a href="fakultetlar.html" class="block py-2 hover:text-dtpi-navy border-b border-slate-100">Fakultetlar</a>
+      <a href="qabul.html" class="block py-2 text-amber-600 font-bold border-b border-slate-100">Qabul-2026</a>
+      <a href="#news" class="block py-2 hover:text-dtpi-navy border-b border-slate-100">Yangiliklar va E'lonlar</a>
+      <a href="kutubxona.html" class="block py-2 hover:text-dtpi-navy">Kutubxona</a>
     </div>
   </header>
 
@@ -121,10 +136,10 @@
           Denov tadbirkorlik va pedagogika instituti — zamonaviy pedagogik texnologiyalar hamda tadbirkorlik ko'nikmalarini amalda qo'llovchi oliy ta'lim muassasasi.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
-          <a href="#qabul" class="bg-dtpi-accent hover:bg-amber-600 text-slate-900 font-extrabold px-6 py-3.5 rounded-xl text-sm transition shadow-lg">
+          <a href="qabul.html" class="bg-dtpi-accent hover:bg-amber-600 text-slate-900 font-extrabold px-6 py-3.5 rounded-xl text-sm transition shadow-lg">
             Qabul-2026 Hujjat Topshirish
           </a>
-          <a href="#about" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3.5 rounded-xl text-sm transition">
+          <a href="rahbariyat.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3.5 rounded-xl text-sm transition">
             Institut Bilan Tanishuv
           </a>
         </div>
@@ -152,7 +167,7 @@
             <span class="text-xs font-bold text-white group-hover:text-dtpi-gold">Unilibrary</span>
             <span class="text-[10px] text-slate-300">Elektron kutubxona</span>
           </a>
-          <a href="#" class="bg-white/10 hover:bg-white/20 p-3.5 rounded-xl flex flex-col items-center text-center transition group border border-white/5">
+          <a href="kutubxona.html" class="bg-white/10 hover:bg-white/20 p-3.5 rounded-xl flex flex-col items-center text-center transition group border border-white/5">
             <span class="text-3xl mb-1 group-hover:scale-110 transition-transform">📅</span>
             <span class="text-xs font-bold text-white group-hover:text-dtpi-gold">Dars Jadvali</span>
             <span class="text-[10px] text-slate-300">Joriy semestr</span>
@@ -270,9 +285,9 @@
       <div>
         <div class="font-bold text-white text-sm mb-3">Institut</div>
         <ul class="space-y-2">
-          <li><a href="#" class="hover:text-white transition">Institut haqida</a></li>
-          <li><a href="#" class="hover:text-white transition">Rahbariyat</a></li>
-          <li><a href="#" class="hover:text-white transition">Fakultetlar va Kafedralar</a></li>
+          <li><a href="rahbariyat.html" class="hover:text-white transition">Institut haqida</a></li>
+          <li><a href="rahbariyat.html" class="hover:text-white transition">Rahbariyat</a></li>
+          <li><a href="fakultetlar.html" class="hover:text-white transition">Fakultetlar va Kafedralar</a></li>
           <li><a href="#" class="hover:text-white transition">Korrupsiyaga qarshi kurash</a></li>
         </ul>
       </div>
@@ -298,6 +313,11 @@
   <script>
     function toggleAccessibility() {
       document.body.classList.toggle('high-contrast');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
     }
 
     function filterNews(type) {
